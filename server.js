@@ -1,5 +1,12 @@
 // Setup empty JS object to act as endpoint for all routes
 
+if(process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+}
+//api key from .env file
+const API_KEY = process.env.API_KEY
+
+
 projectData = {};
 
 // Express to run server and routes
@@ -35,10 +42,18 @@ function listening() {
     console.log(`running on localhost: ${port}`)
 }
 // Callback to debug
+const data = [];
 
 // Initialize all route with a callback function
-
-// Callback function to complete GET '/all'
-
-// Post Route
   
+// Callback function to complete GET '/all'
+app.get('/all', (request, response) => {
+    response.send(projectData)
+});
+
+// Post Router
+
+app.post('/weather', (req, res) => {
+
+}); 
+

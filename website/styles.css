@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+* {
+    font-family: 'Karla', sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background: #4568DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B06AB3, #4568DC) fixed; 
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    display: grid;
+    grid-gap: 15px;
+    width: 850px;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+h1 {
+    grid-area: 1 / 1 / 2 / 3;
+    font-size: 55px;
+    margin-top: 85px;
+    text-align: center;
+    margin-Left: 150px;
+}
+
+.zip-container {
+    grid-area: 2 / 1 / 3 / 2; 
+    margin-left: 150px;
+    word-wrap: break-word;
+
+}
+
+.feeling-container {
+    grid-area: 2 / 2 / 3 / 3;
+   
+}
+
+input {
+    background-color: transparent;
+    width: 165px;
+    height: 45px; 
+    padding: 12px 20px;
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid white;
+    font-size: 18px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Karla';
+   
+   
+  }
+
+  .iconify {
+      font-size: 18px;
+      position: relative;
+      top: 35%;
+      right: 45%;
+      padding: 0 75px 25px 75px;
+      margin-left: 35px;
+  }
+
+  ::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    
+  }
+
+textarea {
+    resize: none; 
+    background-color: transparent;
+    width: 165px;
+    height: 45px;
+    margin-top: 3px;
+    padding: 12px 20px;
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 18px;
+    font-family: 'Karla';
+    
+  
+}
+
+input:focus, 
+textarea:focus {
+  /* Additional highlight for focused elements */
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  font-family: 'Karla';
+}
+
+label {
+    color: white;
+}
+
+.btn{
+    /* grid-area: 3 / 1 / 4 / 3; */
+    position: relative;
+    top: 140%;
+    right: 190%;
+}
+
+#generate {
+    width: 145px;
+    height: 45px;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+    margin-top: 50px;
+    font-size: 20px;   
+}
+
+.app-cold {
+    background-image: url('./assets/winter.png');
+}
+
+
+.weather {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 3px 6px rgba(50, 50 ,75,0.5);
+    grid-area: 3 / 1 / 4 / 4;
+    margin-top: 155px;
+    width: 750px;
+    height: 850px;
+    margin-left: 50px
+}
+
+.detail {
+    margin-top: 85px;
+}
+        
+/* #date {
+    
+} */
+
+#temp {
+  font-size: 55px;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+#content {
+  font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    box-sizing: border-box;
+    width: 550px;
+    margin: 0 auto;
+}
+
+.wi-day-sunny {
+    font-size: 85px;
+    padding-top: 45px;
+}
+
+#feel {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 160px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 3px 6px rgba(50, 50 ,75,0.5);
+    padding-top: 15px;
+}
+
+p {
+    margin: 8px;
+    font-weight: bold;
+}
+
+#wind {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 160px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;box-shadow: 3px 6px rgba(50, 50 ,75,0.5);
+    padding-top: 15px;
+
+   
+}
+
+#humidity {
+    grid-area: 1 / 3 / 2 / 4;
+    width: 160px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 3px 6px rgba(50, 50 ,75,0.5);
+    padding-top: 15px;
+}
+
+#min-max-temp {
+    grid-area: 2 / 3 / 3 / 4;
+    width: 160px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 3px 6px rgba(50, 50 ,75,0.5);
+    padding-top: 15px;
+   
+}
+
+#sunrise {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 160px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 3px 6px rgba(50, 50 ,75,0.5);
+    padding-top: 15px;
+}
+
+#sunset {
+    grid-area: 2 / 2 / 3 / 3;
+    width: 160px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 3px 6px rgba(50, 50 ,75,0.5);
+    padding-top: 15px;
+}
+

@@ -4,7 +4,7 @@
   "description": "working with weather api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devStart": "nodemon server.js"
   },
   "keywords": [
     "w"
@@ -13,6 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "weather-icons": "^1.3.2"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
   }
 }
