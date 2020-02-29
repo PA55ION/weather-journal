@@ -174,12 +174,12 @@ label {
     margin: 0 auto;
 }
 
-.wi-day-sunny {
+#weather-icons {
     font-size: 85px;
     padding-top: 45px;
 }
 
-#feel {
+#feels {
     grid-area: 1 / 1 / 2 / 2;
     width: 160px;
     height: 80px;
