@@ -9,9 +9,12 @@ html {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    background-color: #222222;
+    background: #FEAC5E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  
     color: white;
     overflow-x: hidden;
+    background-attachment: fixed;
 }
 
 .container {
@@ -83,8 +86,6 @@ textarea {
     color: white;
     font-size: 18px;
     font-family: 'Karla';
-    
-  
 }
 
 input:focus, 
@@ -108,8 +109,8 @@ label {
 }
 
 #generate {
-    width: 145px;
-    height: 45px;
+    width: 165px;
+    height: 55px;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -117,6 +118,17 @@ label {
     -o-border-radius: 8px;
     margin-top: 50px;
     font-size: 20px;
+    color: white;
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); 
+
+}
+
+#generate:hover {
+    cursor: pointer;
+    background: #FEAC5E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .weather {
@@ -204,6 +216,11 @@ p {
 .wi-sunset,
 .wi-humidity,
 .wi-thermometer,
-.wi-thermometer {
+.wi-thermometer,
+wi-fahrenheit {
     font-size: 25px;
+}
+
+#content {
+    text-transform: capitalize;
 }
