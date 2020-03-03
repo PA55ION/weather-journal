@@ -1,4 +1,4 @@
-//Global Variable
+//*Global Variable
 const submitBtn = document.getElementById("generate");
 let temp = document.getElementById("temp");
 let city = document.getElementById("city");
@@ -15,15 +15,15 @@ const zipCode = document.getElementById("zip");
 const feelings = document.getElementById("feelings");
 let date = document.getElementById('date');
 
-// Personal API Key for OpenWeatherMap API
+//COMMENT Personal API Key for OpenWeatherMap API
 const API_KEY = "050fe05f4b6fa9f366de526cee98af35";
 const api = `https://api.openweathermap.org/data/2.5/weather?zip=`;
 
-//get date, month and year
+//COMMENT get date, month and year
 function getDate() {
   const month = new Array();
   month[0] = "January";
-  month[1] = "02";
+  month[1] = "February";
   month[2] = "March";
   month[3] = "April";
   month[4] = "May";
@@ -43,7 +43,7 @@ function getDate() {
 }
 getDate();
 
-/* Function to GET Web API Data*/
+//* Function to GET Web API Data
 function getWeather(e) {
   const zipCode = document.getElementById("zip").value;
   console.log(zipCode);
@@ -74,7 +74,7 @@ function getWeather(e) {
     });
 }
 
-//GET request
+//COMMENT  GET request
 const weather = async (url = "") => {
   const request = await fetch(url);
 
@@ -87,7 +87,7 @@ const weather = async (url = "") => {
   }
 };
 
-/* Function to POST data */
+//COMMENT Function to POST data 
 const postWeather = async (url = "", data = {}) => {
   const response = await fetch(url, {
     method: "POST",
@@ -106,8 +106,8 @@ const postWeather = async (url = "", data = {}) => {
   }
 };
 
-//convert unix time 
-//solution https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
+//COMMENT convert unix time stamp to time
+//NOTE solution https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
 
 function convertTime(unix_time) {
   let date = new Date(unix_time * 1000);
@@ -121,6 +121,7 @@ function convertTime(unix_time) {
 return time
 }
 
+//COMMENT  update UI component with data from api
 function updateUI(data) {
   let weatherClass = `<i class="wi wi-owm-${data.weather_code}" ></i>`;
 
@@ -157,7 +158,7 @@ function updateUI(data) {
         </div>`;
 }
 
-/* Function called by event listener */
+//COMMENT  Function called by event listener 
 submitBtn.addEventListener("click", getWeather);
 
 submitBtn.addEventListener("click", () => {
@@ -165,8 +166,8 @@ submitBtn.addEventListener("click", () => {
   
 });
 
+//COMMENT display background image on button click
 function myFunction() {
         document.getElementsByClassName("weather")[0].style.backgroundImage = "url('assets/Moon.png')";
 
   }
-

@@ -10,5 +10,5 @@ The project's goal was to create an asynchronous web app that uses API and user 
 
 
 ## :pray: Acknowledgments
-[^1]: Thanks to [OpenWeathermap](https://openweathermap.org/) for api and [Weather Icon](https://erikflowers.github.io/weather-icons/) for weather icon.
+Thanks to [OpenWeathermap](https://openweathermap.org/) for api and [Weather Icon](https://erikflowers.github.io/weather-icons/) for weather icon.
 
