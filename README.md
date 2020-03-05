@@ -1,5 +1,7 @@
 # :cloud: Weather Journal App
 The project's goal was to create an asynchronous web app that uses API and user data to dynamically update the UI. I also used nodemon to reload my server automatically for when I made any changes to my project.
+Weather app using Open Weather Map api and display dynamic data and dynamic icon that will change based on weather on weather condition.
+
 
 
 ## Dependencies

@@ -13,7 +13,7 @@ let weatherIcon = document.getElementById("weather-icons");
 let gridContainer = document.getElementsByClassName("grid");
 const zipCode = document.getElementById("zip");
 const feelings = document.getElementById("feelings");
-let date = document.getElementById('date');
+let date = document.getElementById("date");
 
 //COMMENT Personal API Key for OpenWeatherMap API
 const API_KEY = "050fe05f4b6fa9f366de526cee98af35";
@@ -87,7 +87,7 @@ const weather = async (url = "") => {
   }
 };
 
-//COMMENT Function to POST data 
+//COMMENT Function to POST data
 const postWeather = async (url = "", data = {}) => {
   const response = await fetch(url, {
     method: "POST",
@@ -118,7 +118,7 @@ function convertTime(unix_time) {
   hours = hours ? hours : 12;
   let time = hours + ":" + minutes.substr(-2) + ampm;
 
-return time
+  return time;
 }
 
 //COMMENT  update UI component with data from api
@@ -156,18 +156,15 @@ function updateUI(data) {
         <i class="wi wi-sunset"></i>
         <br /><p>Sunset <br />${convertTime(data.sunset)}</p>
         </div>`;
+        
+        //COMMENT will update background image when user click a button only.
+        document.getElementsByClassName("weather")[0].style.backgroundImage =
+        "url('assets/Moon.png')";
 }
 
-//COMMENT  Function called by event listener 
+//COMMENT  Function called by event listener
 submitBtn.addEventListener("click", getWeather);
 
-submitBtn.addEventListener("click", () => {
-  zipCode.placeholder = "Your zip is empty";
-  
-});
 
-//COMMENT display background image on button click
-function myFunction() {
-        document.getElementsByClassName("weather")[0].style.backgroundImage = "url('assets/Moon.png')";
 
-  }
+
